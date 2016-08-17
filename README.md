@@ -5,6 +5,9 @@ Useful Unity C# scripts & packages
 Uses Bitwise Operators to manipulate arrays of 32 booleans with a single Integer.
 Useful to manipulate massive amount of booleans with minimum memory, very useful for savefiles.
 
+# FirstPersonPlayer
+The most basic of First Person Player packages.
+
 # IntVectors
 Like Vectors but with Integers instead of floats. 
 Contains IntVector2 and IntVector3 with the corresponding property drawers.
