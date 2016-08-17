@@ -1,5 +1,5 @@
 # Utils
-useful Unity C# scripts
+Useful Unity C# scripts & packages
 
 # BitArray
 Uses Bitwise Operators to manipulate arrays of 32 booleans with a single Integer.
