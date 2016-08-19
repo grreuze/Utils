@@ -1,7 +1,10 @@
 # Utils
 Useful Unity C# scripts & packages
+/Scripts contains single C# scripts
+/Editor contains Editor scripts that must be put in an "Editor" folder in order to work
+/Packages contains unity packages
 
-# BitArray
+## BitArray
 Uses Bitwise Operators to manipulate arrays of 32 booleans with a single Integer.
 Useful to manipulate massive amount of booleans with minimum memory, very useful for savefiles.
 
