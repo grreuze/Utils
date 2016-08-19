@@ -1,8 +1,8 @@
 # Utils
-Useful Unity C# scripts & packages
-/Scripts contains single C# scripts
-/Editor contains Editor scripts that must be put in an "Editor" folder in order to work
-/Packages contains unity packages
+Useful Unity C# scripts & packages  
+/Scripts contains single C# scripts  
+/Editor contains Editor scripts that must be put in an "Editor" folder in order to work  
+/Packages contains unity packages  
 
 # Scripts
 
