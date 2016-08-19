@@ -17,6 +17,12 @@ Allows scene manipulation as objects (drag and drop in inspector, create arrays,
 A TransformSerial class containing a Vector3 position, Quaternion rotation and Vector3 localScale properties, all serializable.
 Allows for quick serialization of transforms, useful for savefiles among other things.
 
+# Editor
+
+## GroupObjects
+Quickly group objects under new empty Parents.  
+Select your game objects in the Hierarchy, press Ctrl+G (or Right Click > Group Objects), enter the Parent's name and validate pressing enter.
+
 # Packages
 
 ## FirstPersonPlayer
