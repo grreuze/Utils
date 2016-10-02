@@ -35,4 +35,5 @@ Contains IntVector2 and IntVector3 with the corresponding property drawers.
 ## RealTimeClock
 A basic Canvas displaying HH:MM real time.
 
-
+## Vignette
+A better looking, more efficient and colourable vignetting effect. Looks good on any resolution since it does not use a texture.
