@@ -10,6 +10,9 @@ Useful Unity C# scripts & packages
 Uses Bitwise Operators to manipulate arrays of 32 booleans with a single Integer.
 Useful to manipulate massive amount of booleans with minimum memory, very useful for savefiles.
 
+## BlinkingText
+A simple script to put on a UI text element for it to blink.
+
 ## SceneField
 Allows scene manipulation as objects (drag and drop in inspector, create arrays, etc).
 
