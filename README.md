@@ -43,3 +43,6 @@ A better looking, more efficient and colourable vignetting effect. Looks good on
 
 ## Radial Blur
 A very simple Radial Blur image effect.
+
+## Title Screen
+A default starting screen with "start" and "exit" buttons. Works with mouse, keyboard and gamepad seamlessly.
