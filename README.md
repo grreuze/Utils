@@ -35,6 +35,9 @@ The most basic of First Person Player packages.
 Like Vectors but with Integers instead of floats. 
 Contains IntVector2 and IntVector3 with the corresponding property drawers.
 
+## MinMax
+A simple Vector2 with "min" and "max" values instead of "x" and "y".
+
 ## RealTimeClock
 A basic Canvas displaying HH:MM real time.
 
