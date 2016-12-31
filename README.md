@@ -26,10 +26,18 @@ Allows for quick serialization of transforms, useful for savefiles among other t
 Quickly group objects under new empty Parents.  
 Select your game objects in the Hierarchy, press Ctrl+G (or Right Click > Group Objects), enter the Parent's name and validate pressing enter.
 
+# Image Effects
+
+## Vignette
+A better looking, more efficient and colourable vignetting effect. Looks good on any resolution since it does not use a texture.
+
+## Radial Blur
+A very simple Radial Blur image effect.
+
 # Packages
 
 ## FirstPersonPlayer
-The most basic of First Person Player packages.
+The most basic of First Person Player packages (good for quick prototypes).
 
 ## IntVectors
 Like Vectors but with Integers instead of floats. 
@@ -40,12 +48,6 @@ A simple Vector2 with "min" and "max" values instead of "x" and "y".
 
 ## RealTimeClock
 A basic Canvas displaying HH:MM real time.
-
-## Vignette
-A better looking, more efficient and colourable vignetting effect. Looks good on any resolution since it does not use a texture.
-
-## Radial Blur
-A very simple Radial Blur image effect.
 
 ## Title Screen
 A default starting screen with "start" and "exit" buttons. Works with mouse, keyboard and gamepad seamlessly.
