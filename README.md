@@ -41,11 +41,12 @@ A very simple Radial Blur image effect.
 The most basic of First Person Player packages (good for quick prototypes).
 
 ##  IntVectors
-Like Vectors but with Integers instead of floats. 
+Like Vectors but with Integers instead of floats.  
 Contains IntVector2 and IntVector3 with the corresponding property drawers.
 
 ##  MinMax
-A simple Vector2 with "min" and "max" values instead of "x" and "y".
+A simple Vector2 with "min" and "max" values instead of "x" and "y".  
+Includes a few handy functions such as clamping from MinMax, as well as a property drawer.
 
 ##  RealTimeClock
 A basic Canvas displaying HH:MM real time.
