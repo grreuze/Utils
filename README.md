@@ -2,6 +2,7 @@
 Useful Unity C# scripts & packages  
 /Scripts contains single C# scripts  
 /Editor contains Editor scripts that must be put in an "Editor" folder in order to work  
+/Image Effects contains camera post processing effects compressed in unity packages
 /Packages contains unity packages  
 
 # Scripts
