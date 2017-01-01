@@ -15,7 +15,7 @@ public class FollowTarget : MonoBehaviour {
 
 	void Start () {
         _transform = transform;
-        distance = target.position + _transform.position;
+        distance = _transform.position - target.position;
 	}
 	
 	void Update () {

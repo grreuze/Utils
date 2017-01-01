@@ -28,7 +28,7 @@ public class ClampPosition : MonoBehaviour {
         position = new Vector3(x, y, z);
     }
 
-    void OnDrawGizmos() {
+    void OnDrawGizmosSelected() {
         if (drawGizmo) {
             Gizmos.color = Color.cyan;
 
