@@ -14,8 +14,11 @@ Useful to manipulate massive amount of booleans with minimum memory, very useful
 ##  > BlinkingText
 A simple script to put on a UI text element for it to blink.
 
-##  > SceneField
-Allows scene manipulation as objects (drag and drop in inspector, create arrays, etc).
+##  > ClampPosition
+Clamps the position of a transform between the specified Vector3 coordinates. 
+
+##  > FollowTarget
+Super simple script binding an object to another one. Better than parenting in some cases, worse in others.
 
 ##  > SerializableTransform
 A TransformSerial class containing a Vector3 position, Quaternion rotation and Vector3 localScale properties, all serializable.
