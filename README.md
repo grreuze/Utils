@@ -20,6 +20,9 @@ Clamps the position of a transform between the specified Vector3 coordinates.
 ##  > FollowTarget
 Super simple script binding an object to another one. Better than parenting in some cases, worse in others.
 
+##  > SceneFeild
+Serializable unity scene files class, to allow them being drag'n'dropped in the inspector.
+
 ##  > SerializableTransform
 A TransformSerial class containing a Vector3 position, Quaternion rotation and Vector3 localScale properties, all serializable.
 Allows for quick serialization of transforms, useful for savefiles among other things.
