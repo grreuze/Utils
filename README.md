@@ -20,6 +20,9 @@ Clamps the position of a transform between the specified Vector3 coordinates.
 ##  > FollowTarget
 Super simple script binding an object to another one. Better than parenting in some cases, worse in others.
 
+##  > LocalTrailRenderer
+A Trail Renderer that works in local space.
+
 ##  > SceneFeild
 Serializable unity scene files class, to allow them being drag'n'dropped in the inspector.
 
