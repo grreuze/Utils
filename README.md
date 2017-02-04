@@ -38,11 +38,15 @@ Select your game objects in the Hierarchy, press Ctrl+G (or Right Click > Group 
 
 # Image Effects
 
-##  > Vignette
-A better looking, more efficient and colourable vignetting effect. Looks good on any resolution since it does not use a texture.
+##  > Gradient Fog
+A fog applying a fully editable gradient from the camera to the distance.
 
 ##  > Radial Blur
 A very simple Radial Blur image effect.
+
+##  > Vignette
+A better looking, more efficient and colourable vignetting effect. Looks good on any resolution since it does not use a texture.
+
 
 # Packages
 
