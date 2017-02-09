@@ -50,6 +50,10 @@ A better looking, more efficient and colourable vignetting effect. Looks good on
 
 # Packages
 
+## > Bool3
+Like a Vector3 but with Bools instead of floats.
+Includes a Property Drawer to have all 3 bools in one line in the inspector.
+
 ##  > FirstPersonPlayer
 The most basic of First Person Player packages (good for quick prototypes).
 
