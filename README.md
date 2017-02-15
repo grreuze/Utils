@@ -70,3 +70,7 @@ Serializable unity scene files class, to allow them being drag'n'dropped in the 
 ##  > SerializableTransform
 A TransformSerial class containing a Vector3 position, Quaternion rotation and Vector3 localScale properties, all serializable.
 Allows for quick serialization of transforms, useful for savefiles among other things.
+
+##  > StandardShaderRenderMode
+Allows changing Unity's Standard Shader's Rendering Mode at Runtime.
+Syntax is material.SetRenderingMode(RenderingMode).
