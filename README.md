@@ -1,15 +1,17 @@
 # Utils
 Useful Unity C# scripts & packages  
-/Scripts contains single C# scripts  
 /Editor contains Editor scripts that must be put in an "Editor" folder in order to work  
 /Image Effects contains camera post processing effects compressed in unity packages  
 /Packages contains unity packages  
+/Scripts contains single C# scripts  
+/Structs contains structures with their respective property drawer compressed in unity packages  
 
 # Editor
 
 ##  > GroupObjects
 Quickly group objects under new empty Parents.  
 Select your game objects in the Hierarchy, press Ctrl+G (or Right Click > Group Objects), enter the Parent's name and validate pressing enter.
+
 
 # Image Effects
 
@@ -25,26 +27,15 @@ A better looking, more efficient and colourable vignetting effect. Looks good on
 
 # Packages
 
-## > Bool3
-Like a Vector3 but with Bools instead of floats.
-Includes a Property Drawer to have all 3 bools in one line in the inspector.
-
 ##  > FirstPersonPlayer
 The most basic of First Person Player packages (good for quick prototypes).
-
-##  > IntVectors
-Like Vectors but with Integers instead of floats.  
-Contains IntVector2 and IntVector3 with the corresponding property drawers.
-
-##  > MinMax
-A simple Vector2 with "min" and "max" values instead of "x" and "y".  
-Includes a few handy functions such as clamping or lerping between Min and Max, as well as a property drawer.
 
 ##  > RealTimeClock
 A basic Canvas displaying HH:MM real time.
 
 ##  > Title Screen
 A default starting screen with "start" and "exit" buttons. Works with mouse, keyboard and gamepad seamlessly.
+
 
 # Scripts
 
@@ -74,3 +65,18 @@ Allows for quick serialization of transforms, useful for savefiles among other t
 ##  > StandardShaderRenderMode
 Allows changing Unity's Standard Shader's Rendering Mode at Runtime.
 Syntax is material.SetRenderingMode(RenderingMode).
+
+
+# Structs
+
+## > Bool3
+Like a Vector3 but with Bools instead of floats.  
+Includes a Property Drawer to have all 3 bools in one line in the inspector.
+
+##  > IntVectors
+Like Vectors but with Integers instead of floats.  
+Contains IntVector2 and IntVector3 with the corresponding property drawers.
+
+##  > MinMax
+A simple Vector2 with "min" and "max" values instead of "x" and "y".  
+Includes a few handy functions such as clamping or lerping between Min and Max, as well as a property drawer.
