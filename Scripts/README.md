@@ -16,7 +16,7 @@ Super simple script binding an object to another one. Better than parenting in s
 ##  > LocalTrailRenderer
 A Trail Renderer that works in local space.
 
-##  > SceneFeild
+##  > SceneField
 Serializable unity scene files class, to allow them being drag'n'dropped in the inspector.
 
 ##  > SerializableTransform
