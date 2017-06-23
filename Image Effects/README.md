@@ -1,5 +1,8 @@
 # Image Effects
 
+##  > Color Overlay
+Adds a single color over the screen, can be used to fade the screen.
+
 ##  > Cubic Distortion
 Distorts the screen using its coordinates. Can be a "speed" effect if negative values, a "fish-eye" effect if positive.
 
