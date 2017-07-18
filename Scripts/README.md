@@ -10,6 +10,9 @@ A simple script to put on a UI text element for it to blink.
 ##  > ClampPosition
 Clamps the position of a transform between the specified Vector3 coordinates. 
 
+##  > FadeParticlesNearPoint
+Component to put on a ParticleSystem to have its particles disappear when getting near a point or coordinate.
+
 ##  > FollowTarget
 Super simple script binding an object to another one. Better than parenting in some cases, worse in others.
 
