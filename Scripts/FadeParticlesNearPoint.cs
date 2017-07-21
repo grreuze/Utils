@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[ExecuteInEditMode]
 [RequireComponent(typeof(ParticleSystem))]
 public class FadeParticlesNearPoint : MonoBehaviour {
 
@@ -8,8 +9,10 @@ public class FadeParticlesNearPoint : MonoBehaviour {
 	[SerializeField] Vector3 point;
 	[SerializeField] float radius;
 	[SerializeField] float startFadeDistance = 3;
+	[SerializeField] bool killParticleWhenFaded;
 	bool isLocal;
 	bool ignoreX, ignoreY, ignoreZ;
+	Color startColor;
 
 	void Start() {
 		ps = GetComponent<ParticleSystem>();
@@ -20,9 +23,10 @@ public class FadeParticlesNearPoint : MonoBehaviour {
 		ignoreZ = point.z == Mathf.Infinity;
 	}
 
-	void Update() {
+	void LateUpdate() {
 
 		ParticleSystem.Particle[] particles = new ParticleSystem.Particle[ps.main.maxParticles];
+		startColor = ps.main.startColor.color;
 		int count = ps.GetParticles(particles);
 
 		for (int i = 0; i < count; i++) {
@@ -37,10 +41,13 @@ public class FadeParticlesNearPoint : MonoBehaviour {
 
 			if (distance < startFadeDistance + radius) {
 				Color color = p.startColor;
-				color.a = Mathf.Lerp(0, 1, Mathf.Max(0, distance - radius) / (startFadeDistance + radius));
+				color.a = startColor.a * Mathf.InverseLerp(radius, startFadeDistance + radius, distance);
 				p.startColor = color;
-				if (distance < radius)
+				if (killParticleWhenFaded && distance < radius)
 					p.remainingLifetime = 0;
+				particles[i] = p;
+			} else {
+				p.startColor = startColor;
 				particles[i] = p;
 			}
 		}
