@@ -17,7 +17,9 @@ public class FadeParticlesNearPoint : MonoBehaviour {
 	void Start() {
 		ps = GetComponent<ParticleSystem>();
 		isLocal = ps.main.simulationSpace == ParticleSystemSimulationSpace.Local;
+	}
 
+	void OnValidate() {
 		ignoreX = point.x == Mathf.Infinity;
 		ignoreY = point.y == Mathf.Infinity;
 		ignoreZ = point.z == Mathf.Infinity;
@@ -33,11 +35,13 @@ public class FadeParticlesNearPoint : MonoBehaviour {
 			ParticleSystem.Particle p = particles[i];
 			Vector3 pos = isLocal ? transform.TransformPoint(p.position) : p.position;
 
-			if (ignoreX) point.x = pos.x;
-			if (ignoreY) point.y = pos.y;
-			if (ignoreZ) point.z = pos.z;
+			float distance = 0;
 
-			float distance = Vector3.Distance(pos, point);
+			if (!ignoreX) distance += (pos.x - point.x) * (pos.x - point.x);
+			if (!ignoreY) distance += (pos.y - point.y) * (pos.y - point.y);
+			if (!ignoreZ) distance += (pos.z - point.z) * (pos.z - point.z);
+
+			distance = Mathf.Sqrt(distance);
 
 			if (distance < startFadeDistance + radius) {
 				Color color = p.startColor;
