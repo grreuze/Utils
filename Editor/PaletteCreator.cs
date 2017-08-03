@@ -77,6 +77,7 @@ public class PaletteCreator : EditorWindow {
 		byte[] bytes = texGradient.EncodeToPNG();
 		File.WriteAllBytes(Application.dataPath + "/" + texName + ".png", bytes);
 		AssetDatabase.Refresh();
+		DestroyImmediate(texGradient);
 	}
 
 }
