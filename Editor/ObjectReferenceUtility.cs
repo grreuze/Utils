@@ -92,7 +92,7 @@ public class ObjectReferenceUtility : EditorWindow {
 	private static bool FieldReferencesComponent<T>(Component obj, FieldInfo fieldInfo, T mb) where T : UnityEngine.Object {
 		if (fieldInfo.FieldType.IsArray) {
 			var arr = fieldInfo.GetValue(obj) as Array;
-
+			if (arr == null) return false;
 			foreach (object elem in arr) {
 				if (elem != null && mb != null && elem.GetType() == mb.GetType()) {
 					var o = elem as T;
@@ -127,7 +127,7 @@ public class ObjectReferenceUtility : EditorWindow {
 	private static void ReplaceReferenceInField<T>(Component obj, FieldInfo fieldInfo, T mb, T target) where T : UnityEngine.Object {
 		if (fieldInfo.FieldType.IsArray) {
 			var arr = (Array)fieldInfo.GetValue(obj);
-			for (int i = 0; i < arr.Length; i++) {
+			for (int i = 0; i < arr?.Length; i++) {
 				object elem = arr.GetValue(i);
 				if (elem != null && mb != null && elem.GetType() == mb.GetType()) {
 					var o = (T)elem;
