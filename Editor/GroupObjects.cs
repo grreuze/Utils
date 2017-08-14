@@ -49,7 +49,8 @@ public class GroupObjects : EditorWindow {
                     groupPosition = commonParent.InverseTransformPoint(groupPosition);
             }
             newGroup.transform.localPosition = groupPosition;
-            foreach (GameObject go in Selection.gameObjects)
+            newGroup.transform.localScale = Vector3.one;
+			foreach (GameObject go in Selection.gameObjects)
                 Undo.SetTransformParent(go.transform, newGroup.transform, "GroupObjects");
         }
         Selection.activeGameObject = newGroup;
