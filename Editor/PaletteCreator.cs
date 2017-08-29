@@ -44,9 +44,8 @@ public class PaletteCreator : EditorWindow {
 
 			if (useGradient)
 				EditorGUILayout.PropertyField(gradient, true);
-			else {
+			else
 				EditorGUILayout.PropertyField(colorList, true);
-			}
 			EditorGUILayout.Space();
 
 			if (useGradient)
@@ -54,9 +53,8 @@ public class PaletteCreator : EditorWindow {
 			EditorGUILayout.PropertyField(wrapMode, true);
 			EditorGUILayout.PropertyField(filterMode, true);
 
-		if (EditorGUI.EndChangeCheck()) {
+		if (EditorGUI.EndChangeCheck())
 			sO.ApplyModifiedProperties();
-		}
 		
 		EditorGUILayout.Space();
 		if (GUILayout.Button("Create Palette")) {
@@ -92,5 +90,4 @@ public class PaletteCreator : EditorWindow {
 		
 		DestroyImmediate(texGradient);
 	}
-
 }
