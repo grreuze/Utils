@@ -12,3 +12,6 @@ Find or Replace all references to a GameObject or its Component(s) in the Scene.
 
 ##  > PaletteCreator
 Quickly create a palette or ramp texture from a Gradient.
+
+##  > WorldSpaceTransform
+Adds a small button to preview the world space coordinates of a transform (position, rotation and scale)
