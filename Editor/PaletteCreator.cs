@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEditor;
 using System.IO;
 
@@ -9,10 +9,9 @@ public class PaletteCreator : EditorWindow {
 	[SerializeField] Gradient _Gradient = new Gradient();
 	[SerializeField] Color[] _Colors = new Color[1] { Color.white };
 	[SerializeField] int _TextureSize = 128;
-	[SerializeField] TextureWrapMode _WrapMode;
-	[SerializeField] FilterMode _FilterMode;
+	[SerializeField] FilterMode _FilterMode = FilterMode.Point;
 
-	bool useGradient = true;
+	bool useGradient = false;
 
 	[MenuItem("Tools/Create Palette")]
 	public static void ShowWindow() {
@@ -24,7 +23,7 @@ public class PaletteCreator : EditorWindow {
 		EditorGUILayout.Space();
 
 		EditorGUILayout.LabelField("Create Palette:", EditorStyles.boldLabel);
-
+		
 		useGradient = EditorGUILayout.Toggle("Use Gradient", useGradient);
 		EditorGUILayout.Space();
 
@@ -33,11 +32,15 @@ public class PaletteCreator : EditorWindow {
 		texName = GUILayout.TextField(texName);
 		EditorGUILayout.EndHorizontal();
 
+		if (File.Exists(Application.dataPath + "/" + texName + ".png"))
+			EditorGUILayout.HelpBox(texName + ".png already exists and will be replaced.", MessageType.Warning);
+
+		EditorGUILayout.Space();
+
 		SerializedObject sO = new SerializedObject(this);
 		SerializedProperty gradient = sO.FindProperty("_Gradient");
 		SerializedProperty colorList = sO.FindProperty("_Colors");
 		SerializedProperty size = sO.FindProperty("_TextureSize");
-		SerializedProperty wrapMode = sO.FindProperty("_WrapMode");
 		SerializedProperty filterMode = sO.FindProperty("_FilterMode");
 
 		EditorGUI.BeginChangeCheck();
@@ -50,11 +53,11 @@ public class PaletteCreator : EditorWindow {
 
 			if (useGradient)
 				EditorGUILayout.PropertyField(size, true);
-			EditorGUILayout.PropertyField(wrapMode, true);
 			EditorGUILayout.PropertyField(filterMode, true);
 
-		if (EditorGUI.EndChangeCheck())
+		if (EditorGUI.EndChangeCheck()) {
 			sO.ApplyModifiedProperties();
+		}
 		
 		EditorGUILayout.Space();
 		if (GUILayout.Button("Create Palette")) {
@@ -67,9 +70,6 @@ public class PaletteCreator : EditorWindow {
 	void CreatePalette() {
 		int size = useGradient ? _TextureSize : _Colors.Length;
 		Texture2D texGradient = new Texture2D(size, 1);
-		texGradient.filterMode = _FilterMode;
-		texGradient.wrapMode = _WrapMode;
-		texGradient.alphaIsTransparency = true;
 
 		if (useGradient) {
 			for (int i = 0; i < _TextureSize; i++) {
@@ -86,8 +86,27 @@ public class PaletteCreator : EditorWindow {
 
 		byte[] bytes = texGradient.EncodeToPNG();
 		File.WriteAllBytes(Application.dataPath + "/" + texName + ".png", bytes);
-		AssetDatabase.Refresh();
+		
+		PalettePostProcessor.filterMode = _FilterMode;
+		PalettePostProcessor.palettePath = "Assets/" + texName + ".png";
+		AssetDatabase.ImportAsset("Assets/" + texName + ".png");
 		
 		DestroyImmediate(texGradient);
+	}
+}
+
+class PalettePostProcessor : AssetPostprocessor {
+	
+	public static string palettePath;
+	public static FilterMode filterMode;
+
+	void OnPreprocessTexture() {
+		if (assetPath == palettePath) {
+			TextureImporter texImport = (TextureImporter)assetImporter;
+			texImport.filterMode = filterMode;
+			texImport.alphaIsTransparency = true;
+			if (filterMode == FilterMode.Point)
+				texImport.npotScale = TextureImporterNPOTScale.None;
+		}
 	}
 }
