@@ -7,6 +7,9 @@ Turn one or more GameObjects in the Scene into instances of a Prefab, while keep
 Quickly group objects under new empty Parents.  
 Select your game objects in the Hierarchy, press Ctrl+G (or Right Click > Group Objects), enter the Parent's name and validate pressing enter.
 
+##  > HierarchyColor
+Select the color of elements in the Hierarchy.
+
 ##  > ObjectReferenceUtility
 Find or Replace all references to a GameObject or its Component(s) in the Scene.
 
