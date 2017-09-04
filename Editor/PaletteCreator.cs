@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEditor;
 using System.IO;
 
@@ -105,6 +105,7 @@ class PalettePostProcessor : AssetPostprocessor {
 			TextureImporter texImport = (TextureImporter)assetImporter;
 			texImport.filterMode = filterMode;
 			texImport.alphaIsTransparency = true;
+			texImport.isReadable = true;
 			if (filterMode == FilterMode.Point)
 				texImport.npotScale = TextureImporterNPOTScale.None;
 		}
