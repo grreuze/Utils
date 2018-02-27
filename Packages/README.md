@@ -1,5 +1,8 @@
 # Packages
 
+##  > Easing
+Contains various common types of easing for your interpolations. Includes the nVector struct.
+
 ##  > FirstPersonPlayer
 The most basic of First Person Player packages (good for quick prototypes).
 
