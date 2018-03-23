@@ -11,6 +11,9 @@ Currently includes Texture Assets and Model Assets, will be expanded in the futu
 Quickly group objects under new empty Parents.  
 Select your game objects in the Hierarchy, press Ctrl+G (or Right Click > Group Objects), enter the Parent's name and validate pressing enter.
 
+##  > HierarchyDisabler
+Enable and Disable items directly from the hierarchy.
+
 ##  > HierarchyStyle
 Change the color of elements in the Hierarchy and add comments to them.
 
