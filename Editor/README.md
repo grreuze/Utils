@@ -26,5 +26,8 @@ Quickly create a palette or ramp texture from a Gradient.
 ##  > SelectChildren
 Press Ctrl+< to select all children of your current selection.
 
+##  > Texture HSV Shift
+Press Ctrl+U to change the Hue, Saturation and Value of a texture.
+
 ##  > WorldSpaceTransform
 Adds a small button to preview the world space coordinates of a transform (position, rotation and scale)
