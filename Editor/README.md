@@ -3,6 +3,9 @@
 ##  > AssignPrefab
 Turn one or more GameObjects in the Scene into instances of a Prefab, while keeping all their Components. (Includes ObjectReferenceUtility)
 
+##  > AutoUpdateClipModelPreview
+Automatically updates the Preview window when selecting an animation clip, if it is connected to a source avatar in the Rig options.
+
 ##  > DefaultImportOptions
 Powerful tool allowing the user to change the default import settings of any files depending on their own nomenclature.
 Currently includes Texture Assets and Model Assets, will be expanded in the future.
