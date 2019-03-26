@@ -20,6 +20,9 @@ Enable and Disable items directly from the hierarchy.
 ##  > HierarchyStyle
 Change the color of elements in the Hierarchy and add comments to them.
 
+##  > Notepad
+A Notepad inside Unity!
+
 ##  > ObjectReferenceUtility
 Find or Replace all references to a GameObject or its Component(s) in the Scene.
 
