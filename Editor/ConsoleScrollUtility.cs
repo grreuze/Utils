@@ -43,11 +43,9 @@ public class ConsoleScrollUtility : EditorWindow {
 
         // initialize
 
-        if (!initialized) {
-            if (!Initialize()) {
-                EditorGUILayout.HelpBox("Console Window is not opened!", MessageType.Error);
-                return;
-            }
+        if (!Initialize()) {
+            EditorGUILayout.HelpBox("Console Window is not opened!", MessageType.Error);
+            return;
         }
 
 
