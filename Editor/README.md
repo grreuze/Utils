@@ -32,6 +32,9 @@ Find or Replace all references to a GameObject or its Component(s) in the Scene.
 ##  > PaletteCreator
 Quickly create a palette or ramp texture from a Gradient.
 
+##  > RecordPlayModeTransform
+Allows you to record changes made to transforms during play mode if desired.
+
 ##  > SelectChildren
 Press Ctrl+< to select all children of your current selection.
 
